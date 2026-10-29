@@ -1,7 +1,10 @@
 #include "common.h"
 
-#include "../src/amd/amdgpu/amdgpu_discovery.c"
+/* Discovery defines these registers itself and must not hide missing includes. */
 #include "../src/amd/navi48.c"
+_Static_assert(mmMM_INDEX == 0x0, "Navi48 needs the MMIO index definition");
+_Static_assert(mmMM_DATA == 0x1, "Navi48 needs the MMIO data definition");
+#include "../src/amd/amdgpu/amdgpu_discovery.c"
 
 static uint8_t image[10 << 10];
 static struct amd_vendor_private priv;

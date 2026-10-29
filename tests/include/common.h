@@ -94,6 +94,8 @@ int amd_common_pre_reset(struct vendor_reset_dev *);
 int amd_common_post_reset(struct vendor_reset_dev *);
 int amd_fake_dev_init(struct amd_fake_dev *, struct vendor_reset_dev *);
 void amd_fake_dev_fini(struct amd_fake_dev *);
+int amdgpu_discovery_get_reg_base(struct amd_fake_dev *, int, unsigned int,
+                                uint32_t *, uint32_t *);
 int pci_save_state(struct pci_dev *);
 void pci_restore_state(struct pci_dev *);
 

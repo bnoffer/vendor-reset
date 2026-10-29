@@ -7,6 +7,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "vendor-reset-dev.h"
 #include "amd.h"
+#include "common_defs.h"
 #include "common.h"
 #include "amdgpu_discovery.h"
 #include "soc15_hw_ip.h"
